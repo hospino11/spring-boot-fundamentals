@@ -1,4 +1,4 @@
-package com.pluralsight.fundamentals.controller;
+package com.pluralsight.fundamentals.web;
 
 import com.pluralsight.fundamentals.service.ApplicationService;
 import lombok.RequiredArgsConstructor;

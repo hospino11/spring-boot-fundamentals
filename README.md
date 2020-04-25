@@ -61,3 +61,33 @@ those resources back to the user.
 
 Controller layer uses the @Controller annotation.
 Service layer contains the business logic to retrieve the data using the repository layer.  
+
+## Spring Boot Maven Plugin
+It repackages your .jar and .war files to be executable. For jar files It collects all the jars on the classpath 
+and builds a single runnable Uber jar. It also runs your Spring Boot application and searches for the public static void
+main method to flag as a runnable class. It provides a built-in dependency resolver that says the version number 
+to match the Spring Boot dependencies. It also manages the lifecycle of Spring Boot application and generates build 
+information that can be used by who call the actuator, that provides at monitoring and metrics.
+
+## REST Architecture Style
+### Representational State Transfer (REST)
+It's a set of guidelines application developers use to design APIs. There are four principles that APIs follow:
+- Data and functionality are considered resources and identified by something called URI (Uniform Resource Identifier).
+- Resources are manipulated using a fixed set of operations.
+    - GET retrieves resources
+    - POST creates resource
+    - PUT updates resources
+    - DELETE removes resources
+    - PATCH updates resources partially by the given information
+- Resouces can be represented in multiple formats.
+- Communication between the client and endpoint is stateless.
+
+ResponseEntity tells to Spring that the returned value of the method is serialized directly to the body of the http 
+response. It represents the entire Http Response which has http status, headers and the response body.
+
+ResponseStatusException is a programmatic alternative to @ResponseStatus. It provides HttpStatus and a reason and a 
+cause. It provides more control over exception handling, so the exceptions can be created programmatically. 
+Spring Boot provides a default error mapping. 
+
+@RestController is a shortcut of the @Controller and @ResponseBody annotations. Using this annotation, we cannot access 
+to the model. 
