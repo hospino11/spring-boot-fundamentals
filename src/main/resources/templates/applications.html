@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Applications</h3>
+    <table>
+        <thead>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Owner</td>
+            <td>Description</td>
+        </thead>
+        <tr th:each="item : ${applications}">
+            <td th:text="${item.id}"></td>
+            <td th:text="${item.name}"></td>
+            <td th:text="${item.owner}"></td>
+            <td th:text="${item.description}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

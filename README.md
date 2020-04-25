@@ -51,4 +51,13 @@ by creating JPA queries automatically from a method name.
 ## Entities
 Entities are objects that live in the database, and they have the ability to be mapped to a database.
 Entities are defined by the @Entity annotation. If the @Table annotation is missing, the entity will be mapped to 
-a table which has the same name as the entity class name.          
+a table which has the same name as the entity class name. 
+
+## MVC
+- Model: representation of data in a system.
+- View: responsible for displaying data.
+- Controller: responsible for directing incoming user requests to the correct resources and send the responses from 
+those resources back to the user.
+
+Controller layer uses the @Controller annotation.
+Service layer contains the business logic to retrieve the data using the repository layer.  
