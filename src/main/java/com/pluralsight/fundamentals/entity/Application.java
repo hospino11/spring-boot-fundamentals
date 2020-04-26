@@ -11,7 +11,7 @@ import javax.persistence.Id;
 
 @Entity
 @Value
-@Builder
+@Builder(toBuilder = true)
 public class Application {
 
     @Id

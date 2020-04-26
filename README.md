@@ -90,4 +90,21 @@ cause. It provides more control over exception handling, so the exceptions can b
 Spring Boot provides a default error mapping. 
 
 @RestController is a shortcut of the @Controller and @ResponseBody annotations. Using this annotation, we cannot access 
-to the model. 
+to the model.
+
+## GraphQL
+GraphQL is a query language for APIs or a syntax that describes ow to ask for data. Each query will have a specific 
+object that it returns and based on the object returned you can add or remove fields which match the exact data you 
+need to fit your specific case. 
+
+### Features
+- Allows client to specify the exact data needed.
+- Aggregation of data from multiple sources, allowing the client to get the needed information with one call.
+- No longer required to call multiple APIs for needed data.
+- GraphQL offers maximum efficiency and flexibility.
+
+### Schemas
+The schema defines data points offered via an API. The schema contains the datatypes and relationships between them and 
+the operations available such as queries for retrieving data and mutations for creating, updating and deleting data.
+The graphql-jav-tools dependency parses schemas ending in ".graphqls" which are found behind the scenes in the 
+classpath, processed and the necessary beans are autowired.  
