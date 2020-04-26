@@ -108,3 +108,21 @@ The schema defines data points offered via an API. The schema contains the datat
 the operations available such as queries for retrieving data and mutations for creating, updating and deleting data.
 The graphql-jav-tools dependency parses schemas ending in ".graphqls" which are found behind the scenes in the 
 classpath, processed and the necessary beans are autowired.  
+
+## Actuator
+Actuator provides health checks, auditing, metrics gathering and http tracing by exposing HTTP or JMX endpoints.
+
+See application.properties for more information of actuator configuration.
+
+## Testing
+JUnit, Mockito and Spring Test (also known as MockMvc) for testing Rest APIs.
+### @WebMvcTest
+An annotation used for controller layer unit testing. It's often used to test one controller at a time. Scans only 
+controllers including @Controller and @RestController and will not load full application context. It the controller has 
+dependencies of other beans the test will not run until you provide the instance yourself or a mocked instance.
+@WebMvcTest speeds up testing by loading small portion of your application.
+### Integration Testing
+Allows testing the entire application in every layer as not such as individual units. It can be performed without 
+deployment of an application. @SpringBootTest annotation is used for integration testing. It's chosen over @WebMvcTest 
+because @SpringBootTest starts full application context including the server and does not customize component scanning 
+at all. @SpringBootTest locates the main configuration class annotated with the @SpringBootApplication annotation.
